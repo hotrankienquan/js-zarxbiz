@@ -11,20 +11,12 @@
 		let players =[ 
 			'rom', 'roger', 'andrew', 'mark', 'albert'
 		];
-		// add value in the end of this array
-
-		// players.push('kt')
-
-		//add values in the start of array
-		// players.unshift('sky')
-
-		//add values in array at ntn position
-		// console.log(players.indexOf('roger'))
-		// players.splice(players.indexOf('roger'),0, 'any position') // splice add
-		
-		// players.splice(players.indexOf('roger'),2, 'any position') // splice remove
-		
-
+		// remove 1st value from array
+		// players.shift()
+		// remove the last value from array
+		// players.pop()
+		console.log(players.indexOf('mark'))
+		players.splice(players.indexOf('mark'), 1)
 		let outPut = ''
 		for(let i = 0  ; i < players.length; i++){
 			outPut += players[i] + ', '
