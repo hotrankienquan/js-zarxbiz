@@ -7,21 +7,85 @@
 	<title>Document</title>
 </head>
 <body>
+	<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 	<script>
-		let players =[ 
-			'rom', 'roger', 'andrew', 'mark', 'albert'
-		];
-		// remove 1st value from array
-		// players.shift()
-		// remove the last value from array
-		// players.pop()
-		console.log(players.indexOf('mark'))
-		players.splice(players.indexOf('mark'), 1)
-		let outPut = ''
-		for(let i = 0  ; i < players.length; i++){
-			outPut += players[i] + ', '
-		}
-			console.log(outPut)
+		$(function(){
+			let players = [
+				{'name': 'Rome', 'cash': 230,},
+				{'name': 'roger', 'cash': 25,},
+				{'name': 'andrew', 'cash': 100,},
+				{'name': 'mark', 'cash': 450,},
+				{'name': 'albert', 'cash': 78,},
+				{'name': 'john', 'cash': 1200,},
+			];
+			// filter
+			// let returnedData = players.filter((item) => {
+			// 	return item.cash < 200
+			// })
+			// console.log(returnedData)
+
+			//map method: return ve dang true/ false
+			// let returnedData = players.map((item) => {
+			// 	return item.cash < 200
+			// })
+			// console.log(returnedData)
+
+			//Find method: return ve 1 phan tu dau tien thoa man
+			//  let returnedData = players.find((item) => {
+			// 	return item.cash < 200
+			// })
+			// console.log(returnedData)
+
+			// // Every method
+			// let returnedData = players.every((item) => {
+
+			// 	return item.cash > 10;
+			// })
+			// console.log(returnedData)
+
+			// some method
+			// let returnedData = players.some((item) => {
+
+			// 	return item.cash > 10;
+			// })
+			// console.log(returnedData)
+
+			//reduce method
+			// let returnedData = players.reduce((total, item) => {
+			// 	return item.cash + total
+			// }, 17)
+			// console.log(returnedData)
+
+			//includes method
+			// let marks = [1, 32, 3,5,82]
+			// console.log(marks.includes(1))
+
+			// foreach method
+			// let users = []
+			// players.forEach((item) => {
+			// 	users.push(item.name)
+			// })
+			// console.log(users)
+
+			//sorting data
+			// let users = []
+			// players.forEach((item) => {
+			// 	users.push(item.name)
+			// })
+			// console.log(users.sort().reverse())
+
+			// indexOf
+			let indexes = []
+			let marks = [1, 32, 3,5,82]
+			// console.log(marks.indexOf(32))
+			marks.forEach((item, index) => {
+				if(item == 3){
+					indexes.push(index)
+				}
+			})
+			console.log(indexes)
+
+		})
 	</script>
 </body>
 </html>
